@@ -6,6 +6,6 @@ namespace Consumer.Interfaces
 {
     public interface ICommentLoaderService
     {
-        public Task<IEnumerable<Comment>> FetchCommentRangeAsync(int postId);
+        public Task<IEnumerable<Comment>> FetchCommentsForPostAsync(int postId);
     }
 }

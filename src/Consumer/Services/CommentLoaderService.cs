@@ -15,7 +15,7 @@ namespace Consumer.Services
             _httpClient = httpClient;
         }
 
-        public async Task<IEnumerable<Comment>> FetchCommentRangeAsync(int postId)
+        public async Task<IEnumerable<Comment>> FetchCommentsForPostAsync(int postId)
         {
             string url = $"/posts/{postId}/comments";
             string response = await _httpClient.GetStringAsync(url);

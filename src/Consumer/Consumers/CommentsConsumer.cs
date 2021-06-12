@@ -17,7 +17,7 @@ namespace Consumer.Consumers
 
         public async Task Consume(ConsumeContext<CommentRequest> context)
         {
-            IEnumerable<Comment> comments = await _commentLoaderService.FetchCommentRangeAsync(context.Message.PostId);
+            IEnumerable<Comment> comments = await _commentLoaderService.FetchCommentsForPostAsync(context.Message.PostId);
             CommentResponse response = new CommentResponse
             {
                 Comments = comments
