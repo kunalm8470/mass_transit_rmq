@@ -15,3 +15,5 @@ The exchange created by MassTransit is using [`Fanout exchange type`](https://lo
 The exchange is bound to the queue which is represented by a receiving endpoint in the consumer code. The consumer exposes a [`Consume`](./src/Consumer/Consumers/CommentsConsumer.cs#L18-L26) method which acts as an entry point for the consumer handler.
 
 The consumer then calls the [`JSONPlaceholder comments API`](https://jsonplaceholder.typicode.com/comments) to fetch the response and send back to the sender.
+
+Postman [`collection`](https://www.getpostman.com/collections/77cde9b635aab542cce3) and [`environment variables`](./Local.postman_environment.json).

@@ -19,7 +19,7 @@ namespace Sender.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll([FromQuery] int postId)
+        public async Task<ActionResult<IEnumerable<Comment>>> FetchCommentsByPostAsnyc([FromQuery] int postId)
         {
             using var request = _client.Create(new CommentRequest { PostId = postId });
             var response = await request.GetResponse<CommentResponse>();
