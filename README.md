@@ -1,4 +1,4 @@
-# Simple sender and consumer using Mass Transit RabbitMQ
+# Async Request-Response via RabbitMQ using MassTransit
 
 Pre-requisites -<br/>
 Spin up a local RabbitMQ container with management console
